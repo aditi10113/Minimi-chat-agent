@@ -1,0 +1,20 @@
+{
+  "name": "minimi-chat-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A memory-aware web research chat agent for the Minimi hiring challenge",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check public/app.js"
+  },
+  "engines": { "node": ">=20.0.0" },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "openai": "^5.12.2"
+  }
+}

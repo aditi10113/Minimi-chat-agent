@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f7f4" />
+  <title>Minimi — Research chat</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">m</span><span>minimi</span></div>
+      <button id="new-chat" class="new-chat">＋ <span>New chat</span></button>
+      <div class="side-note">
+        <span class="dot"></span>
+        <span>One tool · Web search</span>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="privacy-icon">⌑</div>
+        <div><strong>Your history stays here</strong><p>Saved locally on this server.</p></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">m</span> minimi</div>
+        <div class="model-label"><span class="live-dot"></span> Research assistant</div>
+        <button id="clear-chat" class="clear-button" title="Delete this conversation">Clear chat</button>
+      </header>
+
+      <section id="chat" class="chat">
+        <div id="welcome" class="welcome">
+          <div class="welcome-mark">m</div>
+          <p class="eyebrow">YOUR RESEARCH COMPANION</p>
+          <h1>Good questions deserve<br/><em>better answers.</em></h1>
+          <p class="welcome-copy">I can search the web, remember what we discussed, and check whether old answers still hold up.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Compare the best CRM tools for a 20-person sales team. Include pricing sources and key trade-offs."><span>↗</span><span><b>Research a decision</b><small>Compare tools, pricing and trade-offs</small></span></button>
+            <button class="suggestion" data-prompt="What changed recently in the Node.js ecosystem? Use official release notes."><span>◷</span><span><b>What's changed?</b><small>Find the latest product updates</small></span></button>
+            <button class="suggestion" data-prompt="Explain how PostgreSQL hosting options compare for a small production app."><span>⌕</span><span><b>Explore a topic</b><small>Get a sourced, practical overview</small></span></button>
+          </div>
+        </div>
+        <div id="messages" class="messages" aria-live="polite"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form id="chat-form" class="composer">
+          <textarea id="message-input" rows="1" maxlength="8000" placeholder="Ask anything. I’ll search when it matters…" aria-label="Your message"></textarea>
+          <button id="send-button" type="submit" aria-label="Send message"><span>↑</span></button>
+        </form>
+        <p class="disclaimer">Minimi can make mistakes. Check important details against cited sources.</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
